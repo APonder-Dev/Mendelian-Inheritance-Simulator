@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skin Color Inheritance Tester</title>
+  <link rel="stylesheet" href="../css/style.css" id="light-mode-style">
+  <link rel="stylesheet" href="../css/darkmode.css" id="dark-mode-style" disabled> 
+  <link rel="stylesheet" href="../css/layout.css">  
+</head>
+<body data-page-id="skinColor">
+  <header>
+    <h1>Skin Color Inheritance Tester</h1>
+    <button id="darkModeToggle">Toggle Dark Mode</button>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="blood-types.html">Blood Types</a></li>
+      <li><a href="eye-color.html">Eye Color</a></li>
+      <li><a href="skin-color.html">Skin Color</a></li>
+      <li><a href="height.html">Height</a></li>
+    </ul>
+  </nav>  
+  
+  <main class="container">
+    <div class="left-column">
+        <section>
+            <h2>Understanding Skin Color Inheritance</h2>
+            <p>
+                Skin color inheritance is determined by multiple genes that influence melanin production in the skin. 
+                This tester simulates possible skin colors for children based on the selected skin colors of their parents. 
+                The colors are generally categorized into five groups: Light, Medium Light, Medium, Medium Dark, and Dark.
+            </p>
+            <p>
+                The combination of genes from both parents contributes to the range of skin colors that children can inherit. 
+                For example, a child with one light-skinned and one dark-skinned parent may inherit a skin tone that is medium or somewhere in between.
+            </p>
+        </section>
+
+        <section>
+            <h3>Visual Representation of Skin Colors</h3>
+            <div id="color-samples">
+                <div class="color-sample" id="light-sample" style="background-color: #f4c2c2;">Light</div>
+                <div class="color-sample" id="medium-light-sample" style="background-color: #d9b68c;">Medium Light</div>
+                <div class="color-sample" id="medium-sample" style="background-color: #a67c4d;">Medium</div>
+                <div class="color-sample" id="medium-dark-sample" style="background-color: #6f4c3e;">Medium Dark</div>
+                <div class="color-sample" id="dark-sample" style="background-color: #3b2b2b;">Dark</div>
+            </div>
+        </section>
+    </div>
+
+    <div class="right-column">
+        <section>
+            <h2>Select Parent Skin Colors</h2>
+            <label for="parent1-skin">Parent 1 Skin Color:</label>
+            <select id="parent1-skin">
+                <option value="light">Light</option>
+                <option value="medium-light">Medium Light</option>
+                <option value="medium">Medium</option>
+                <option value="medium-dark">Medium Dark</option>
+                <option value="dark">Dark</option>
+            </select>
+
+            <label for="parent2-skin">Parent 2 Skin Color:</label>
+            <select id="parent2-skin">
+                <option value="light">Light</option>
+                <option value="medium-light">Medium Light</option>
+                <option value="medium">Medium</option>
+                <option value="medium-dark">Medium Dark</option>
+                <option value="dark">Dark</option>
+            </select>
+
+            <button id="calculate-skin">Calculate Possible Skin Colors</button>
+        </section>
+
+        <section>
+            <h3>Possible Skin Colors for Children:</h3>
+            <ul id="results-skin"></ul>
+        </section>
+
+        <section>
+            <h3>Analysis</h3>
+            <p id="average-result"></p>
+            <p id="range-result"></p>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Ponder, Anthony. All rights reserved.</p>
+</footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/darkmode.js"></script>
+  <script src="../js/alleles/skinColor.js"></script>
+</body>
+</html>

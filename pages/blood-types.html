@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Type Inheritance</title>
+    <link rel="stylesheet" href="../css/style.css" id="light-mode-style">
+    <link rel="stylesheet" href="../css/darkmode.css" id="dark-mode-style" disabled> 
+    <link rel="stylesheet" href="../css/layout.css">  
+</head>
+<body data-theme="bloodType">
+    <header>
+        <h1>Blood Type Inheritance</h1>
+        <p>Learn about blood types and their inheritance patterns.</p>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="blood-types.html">Blood Types</a></li>
+            <li><a href="eye-color.html">Eye Color</a></li>
+            <li><a href="skin-color.html">Skin Color</a></li>
+            <li><a href="height.html">Height</a></li>
+            <li><a href="hair-color.html">Hair Color</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="left-column">
+            <section>
+                <h2>What are Blood Types?</h2>
+                <p>Blood types are determined by the presence or absence of specific antigens on the surface of red blood cells. The main blood type systems are the ABO system and the Rh factor.</p>
+            </section>
+
+            <section>
+                <h2>ABO Blood Types</h2>
+                <ul>
+                    <li><strong>Type A</strong>: Has A antigens and B antibodies.</li>
+                    <li><strong>Type B</strong>: Has B antigens and A antibodies.</li>
+                    <li><strong>Type AB</strong>: Has both A and B antigens, no antibodies (universal recipient).</li>
+                    <li><strong>Type O</strong>: Has no antigens, both A and B antibodies (universal donor).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Rh Factor</h2>
+                <p>The Rh factor can be either positive (+) or negative (-). Rh-positive means the Rh antigen is present, while Rh-negative means it is absent. The combination of ABO type and Rh factor determines a person's complete blood type.</p>
+            </section>
+
+            <section>
+                <h2>Blood Type Inheritance</h2>
+                <p>Blood type inheritance follows Mendelian genetics. Here are some common genotype combinations and their possible offspring blood types:</p>
+                <ul>
+                    <li>Type A (IAIA or IAi) x Type B (IBIB or IBi) can produce: A, B, AB, O</li>
+                    <li>Type A (IAi) x Type O (ii) can produce: A, O</li>
+                    <li>Type AB (IAIB) x Type O (ii) can produce: A, B</li>
+                    <li>Type O (ii) x Type O (ii) can only produce: O</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="right-column">
+            <section>
+                <h2>Blood Type Calculator</h2>
+                <p>Select parent blood types to see possible offspring blood types:</p>
+                <form id="bloodTypeForm">
+                    <label for="parent1">Parent 1 Blood Type:</label>
+                    <select id="parent1">
+                        <option value="IAIA">A (IAIA)</option>
+                        <option value="IAi">A (IAi)</option>
+                        <option value="IBIB">B (IBIB)</option>
+                        <option value="IBi">B (IBi)</option>
+                        <option value="IAIB">AB (IAIB)</option>
+                        <option value="ii">O (ii)</option>
+                    </select>
+            
+                    <label for="parent2">Parent 2 Blood Type:</label>
+                    <select id="parent2">
+                        <option value="IAIA">A (IAIA)</option>
+                        <option value="IAi">A (IAi)</option>
+                        <option value="IBIB">B (IBIB)</option>
+                        <option value="IBi">B (IBi)</option>
+                        <option value="IAIB">AB (IAIB)</option>
+                        <option value="ii">O (ii)</option>
+                    </select>
+            
+                    <button type="button" onclick="calculateBloodTypes()">Calculate Offspring Blood Types</button>
+                </form>
+                <div id="results"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ponder, Anthony. All rights reserved.</p>
+    </footer>
+    
+    <script src="../js/script.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/alleles/bloodType.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+/* layout.css */
+.container {
+  display: flex; /* Use Flexbox for layout */
+  max-width: 1200px; /* Max width for the container */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Add some padding */
+  min-height: calc(100vh - 100px); /* Adjust for footer height */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.left-column {
+  flex: 2; /* Takes up 2 parts of the flex container */
+  padding-right: 20px; /* Space between columns */
+  min-height: 400px; /* Ensure a minimum height for the left column */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.right-column {
+  flex: 1; /* Takes up 1 part of the flex container */
+  padding-left: 20px; /* Space between columns */
+  min-height: 400px; /* Ensure a minimum height for the right column */
+  padding-bottom: 50px; /* Add padding at the bottom of the right column */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+h2 {
+  margin-top: 20px; /* Add some space above headings */
+}
+
+/* Add margin below images to prevent overlap */
+img {
+  width: 100%; /* Make images responsive */
+  max-width: 600px; /* Maximum width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Add rounded corners to images */
+  margin-bottom: 20px; /* Space below the image */
+}
+
+/* Add some bottom margin to paragraphs in the right column */
+.right-column p {
+  margin-bottom: 20px; /* Add space below paragraphs */
+}
+
+/* Ensure clear separation of text */
+.right-column {
+  position: relative; /* Establish positioning context */
+}
+
+/* Optional: Improve the overall readability */
+body {
+  line-height: 1.6; /* Increase line-height for better readability */
+}
+
+/* Prevent overflow issues */
+.right-column section {
+  margin-bottom: 20px; /* Space between sections */
+}
+
+/* Additional adjustments for the footer */
+footer {
+  margin-top: 20px; /* Space above the footer */
+  padding: 10px; /* Padding inside footer */
+  text-align: center; /* Center text in the footer */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack columns on smaller screens */
+  }
+
+  .left-column, .right-column {
+    padding: 0; /* Remove padding for full-width layout */
+    min-height: auto; /* Remove min-height on smaller screens */
+  }
+
+  .right-column {
+    padding-top: 20px; /* Add some space at the top for the right column */
+  }
+}

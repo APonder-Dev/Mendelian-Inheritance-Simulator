@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #333;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #4CAF50;
+  border-radius: 4px;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+}
+
+h2 {
+  color: #4CAF50;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Form and Results */
+label, select, input[type="number"] {
+  display: block;
+  margin: 10px 0;
+}
+
+ul#results, ul#results-skin, ul#results-height {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+
+/* Eye Color Sampler*/
+#color-samples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Space between samples */
+  margin: 20px 0; /* Margin above and below the samples */
+}
+
+.color-sample {
+  width: 80px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height */
+  color: white; /* Text color for better visibility */
+  text-align: center; /* Center the text */
+  line-height: 50px; /* Vertically center the text */
+  font-weight: bold; /* Make the text bold */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #fff; /* Optional: Add a white border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+  transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.color-sample:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}

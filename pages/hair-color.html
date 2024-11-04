@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Color Inheritance Tester</title>
+    <link rel="stylesheet" href="../css/style.css" id="light-mode-style">
+    <link rel="stylesheet" href="../css/layout.css"> 
+    <link rel="stylesheet" href="../css/darkmode.css" id="dark-mode-style" disabled>   
+</head>
+<body data-page-id="hairColor">
+    <header>
+        <h1>Hair Color Inheritance Tester</h1>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="blood-types.html">Blood Types</a></li>
+            <li><a href="eye-color.html">Eye Color</a></li>
+            <li><a href="skin-color.html">Skin Color</a></li>
+            <li><a href="height.html">Height</a></li>
+            <li><a href="hair-color.html">Hair Color</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="left-column">
+            <section>
+                <h2>Understanding Hair Color Inheritance</h2>
+                <p>
+                    Hair color inheritance is determined by multiple genes, leading to a variety of hair colors in offspring.
+                    Common categories include Black, Brown, Blonde, Red, and others.
+                </p>
+                <p>
+                    The combination of alleles from both parents determines the potential hair colors that their children may inherit.
+                </p>
+            </section>
+
+            <section>
+                <h3>Visual Representation of Hair Colors</h3>
+                <div id="color-samples">
+                    <div class="color-sample" id="black-sample" style="background-color: #1C1C1C;">Black</div>
+                    <div class="color-sample" id="brown-sample" style="background-color: #8B4513;">Brown</div>
+                    <div class="color-sample" id="medium-brown-sample" style="background-color: #7B4B3A;">Medium Brown</div>
+                    <div class="color-sample" id="light-brown-sample" style="background-color: #A0522D;">Light Brown</div>
+                    <div class="color-sample" id="blonde-sample" style="background-color: #FFD700;">Blonde</div>
+                    <div class="color-sample" id="platinum-blonde-sample" style="background-color: #E9E9E9;">Platinum Blonde</div>
+                    <div class="color-sample" id="red-sample" style="background-color: #FF4500;">Red</div>
+                    <div class="color-sample" id="strawberry-blonde-sample" style="background-color: #FFB3B3;">Strawberry Blonde</div>
+                    <div class="color-sample" id="grey-sample" style="background-color: #A9A9A9;">Grey</div>
+                    <div class="color-sample" id="white-sample" style="background-color: #FFFFFF;">White</div>
+                </div>
+            </section>
+        </div>
+
+        <div class="right-column">
+            <section>
+                <h2>Select Parent Hair Colors</h2>
+                <label for="parent1Allele1">Parent 1 Hair Color Allele 1:</label>
+                <select id="parent1Allele1">
+                    <option value="b">Black</option>
+                    <option value="br">Brown</option>
+                    <option value="mb">Medium Brown</option>
+                    <option value="lb">Light Brown</option>
+                    <option value="bl">Blonde</option>
+                    <option value="pb">Platinum Blonde</option>
+                    <option value="r">Red</option>
+                    <option value="sb">Strawberry Blonde</option>
+                    <option value="g">Grey</option>
+                    <option value="w">White</option>
+                </select>
+
+                <label for="parent1Allele2">Parent 1 Hair Color Allele 2:</label>
+                <select id="parent1Allele2">
+                    <option value="b">Black</option>
+                    <option value="br">Brown</option>
+                    <option value="mb">Medium Brown</option>
+                    <option value="lb">Light Brown</option>
+                    <option value="bl">Blonde</option>
+                    <option value="pb">Platinum Blonde</option>
+                    <option value="r">Red</option>
+                    <option value="sb">Strawberry Blonde</option>
+                    <option value="g">Grey</option>
+                    <option value="w">White</option>
+                </select>
+
+                <label for="parent2Allele1">Parent 2 Hair Color Allele 1:</label>
+                <select id="parent2Allele1">
+                    <option value="b">Black</option>
+                    <option value="br">Brown</option>
+                    <option value="mb">Medium Brown</option>
+                    <option value="lb">Light Brown</option>
+                    <option value="bl">Blonde</option>
+                    <option value="pb">Platinum Blonde</option>
+                    <option value="r">Red</option>
+                    <option value="sb">Strawberry Blonde</option>
+                    <option value="g">Grey</option>
+                    <option value="w">White</option>
+                </select>
+
+                <label for="parent2Allele2">Parent 2 Hair Color Allele 2:</label>
+                <select id="parent2Allele2">
+                    <option value="b">Black</option>
+                    <option value="br">Brown</option>
+                    <option value="mb">Medium Brown</option>
+                    <option value="lb">Light Brown</option>
+                    <option value="bl">Blonde</option>
+                    <option value="pb">Platinum Blonde</option>
+                    <option value="r">Red</option>
+                    <option value="sb">Strawberry Blonde</option>
+                    <option value="g">Grey</option>
+                    <option value="w">White</option>
+                </select>
+
+                <button id="calculate" onclick="testOffspringHairColor()">Calculate Possible Hair Colors</button>
+                <h3>Possible Hair Colors for Children:</h3>
+                <div id="results"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ponder, Anthony. All rights reserved.</p>
+    </footer>
+        
+    <script src="../js/script.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/alleles/hairColor.js"></script>
+</body>
+</html>

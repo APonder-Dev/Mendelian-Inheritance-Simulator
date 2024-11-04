@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height Inheritance</title>
+    <link rel="stylesheet" href="../css/style.css" id="light-mode-style">
+    <link rel="stylesheet" href="../css/layout.css"> 
+    <link rel="stylesheet" href="../css/darkmode.css" id="dark-mode-style" disabled>  
+</head>
+<body data-theme="light">
+    <header>
+        <h1>Height Inheritance</h1>
+        <p>Learn about height inheritance patterns in children based on their parents' heights.</p>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="blood-types.html">Blood Types</a></li>
+            <li><a href="eye-color.html">Eye Color</a></li>
+            <li><a href="skin-color.html">Skin Color</a></li>
+            <li><a href="height.html">Height</a></li>
+            <li><a href="hair-color.html">Hair Color</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="left-column">
+            <section>
+                <h2>Understanding Height Inheritance</h2>
+                <p>Height is influenced by a combination of genetic and environmental factors. While genetics play a significant role, other factors like nutrition and health during childhood can also affect a person's final height.</p>
+                <p>Typically, children inherit height traits from their parents. Studies show that the height of a child can generally fall within a range determined by their parents' heights.</p>
+            </section>
+
+            <section>
+                <h2>Height Inheritance Patterns</h2>
+                <p>While each child is unique, it is common for their heights to be somewhat between the heights of their parents. Various studies suggest that children can be, on average, within 4 inches (10 cm) of the average of their parents' heights.</p>
+            </section>
+        </div>
+
+        <div class="right-column">
+            <section>
+                <h2>Height Calculator</h2>
+                <p>Input the heights of the parents to see possible offspring heights:</p>
+                <form id="heightForm">
+                  <div>
+                    <label for="parent1-feet">Parent 1 Height:</label>
+                    <input type="number" id="parent1-feet" placeholder="Feet" min="0" max="15">
+                    <input type="number" id="parent1-inches" placeholder="Inches" min="0" max="10">
+                </div>
+                <div>
+                    <label for="parent2-feet">Parent 2 Height:</label>
+                    <input type="number" id="parent2-feet" placeholder="Feet" min="0" max="15">
+                    <input type="number" id="parent2-inches" placeholder="Inches" min="0" max="10">
+                </div>
+                <button type="button" id="calculateButton">Calculate Offspring Heights</button>
+                <div id="heightResult"></div>               
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ponder, Anthony. All rights reserved.</p>
+    </footer>    
+
+    <script src="../js/script.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/alleles/height.js"></script>
+</body>
+</html>
