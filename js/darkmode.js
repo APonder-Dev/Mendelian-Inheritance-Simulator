@@ -5,13 +5,13 @@ document.getElementById('darkModeToggle').addEventListener('click', () => {
 
   // Toggle the styles
   if (darkStyle.disabled) {
-      darkStyle.disabled = false; // Enable dark mode
-      lightStyle.disabled = true;  // Disable light mode
-      localStorage.setItem('theme', 'dark'); // Save the choice in local storage
+    darkStyle.disabled = false;
+    lightStyle.disabled = true;
+    localStorage.setItem('theme', 'dark');
   } else {
-      darkStyle.disabled = true;  // Disable dark mode
-      lightStyle.disabled = false; // Enable light mode
-      localStorage.setItem('theme', 'light'); // Save the choice in local storage
+    darkStyle.disabled = true;
+    lightStyle.disabled = false;
+    localStorage.setItem('theme', 'light');
   }
 });
 
@@ -23,10 +23,10 @@ window.addEventListener('load', () => {
 
   // Apply the saved theme
   if (savedTheme === 'dark') {
-      darkStyle.disabled = false; // Enable dark mode
-      lightStyle.disabled = true;  // Disable light mode
+    darkStyle.disabled = false;
+    lightStyle.disabled = true;
   } else {
-      darkStyle.disabled = true;  // Disable dark mode
-      lightStyle.disabled = false; // Enable light mode
+    darkStyle.disabled = true;
+    lightStyle.disabled = false;
   }
 });

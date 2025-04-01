@@ -24,6 +24,6 @@ function toggleDarkMode() {
 
 function loadPageScript(pageId) {
   const script = document.createElement("script");
-  script.src = `js/alleles/${pageId}.js`; // Matches file name to page ID
+  script.src = `js/alleles/${pageId}.js`;
   document.body.appendChild(script);
 }

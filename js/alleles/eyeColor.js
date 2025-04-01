@@ -36,13 +36,13 @@ function getEyeColor(allele1, allele2) {
 
 function displayResults(results) {
   const resultSection = document.getElementById("results");
-  resultSection.innerHTML = ''; // Clear previous results
+  resultSection.innerHTML = '';
 
-  const offspring = []; // Array to hold offspring eye colors
-  const offspringCount = 4; // We want to generate exactly 4 offspring
-  let totalColorIndex = 0; // To calculate the average
-  let minColorIndex = Infinity; // For the minimum color index
-  let maxColorIndex = -Infinity; // For the maximum color index
+  const offspring = [];
+  const offspringCount = 4;
+  let totalColorIndex = 0;
+  let minColorIndex = Infinity;
+  let maxColorIndex = -Infinity;
 
   // Map eye colors to color indices for averaging
   const colorIndexMap = {

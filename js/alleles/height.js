@@ -15,7 +15,7 @@ function testOffspringHeight() {
     const averageHeight = (parent1Height + parent2Height) / 2;
 
     // Determine possible height range (±3 inches for variability)
-    const minHeight = Math.max(0, averageHeight - 3); // Ensure minHeight is not negative
+    const minHeight = Math.max(0, averageHeight - 3); 
     const maxHeight = averageHeight + 3;
 
     // Display the results
@@ -24,7 +24,7 @@ function testOffspringHeight() {
 
 function displayHeightResults(minHeight, maxHeight) {
     const heightResultSection = document.getElementById("heightResult");
-    heightResultSection.innerHTML = ''; // Clear previous results
+    heightResultSection.innerHTML = '';
 
     // Convert min and max heights to feet and inches
     const minFeet = Math.floor(minHeight / 12);
@@ -58,5 +58,5 @@ function displayHeightResults(minHeight, maxHeight) {
 }
 
 function getRandomHeight(minHeight, maxHeight) {
-    return Math.floor(Math.random() * (maxHeight - minHeight + 1)) + minHeight; // Random height between min and max
+    return Math.floor(Math.random() * (maxHeight - minHeight + 1)) + minHeight;
 }

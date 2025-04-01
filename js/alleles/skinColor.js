@@ -13,7 +13,7 @@ function testOffspringSkinColor() {
   const possibleColors = getPossibleSkinColors(parent1SkinColor, parent2SkinColor);
 
   // Generate offspring skin colors and calculate average and range
-  const numberOfChildren = 4; // You can change this value to simulate more children
+  const numberOfChildren = 4;
   const offspringColors = generateOffspringColors(possibleColors, numberOfChildren);
   const averageColor = calculateAverageColor(offspringColors);
   const colorRange = calculateColorRange(offspringColors);
@@ -42,7 +42,7 @@ function getPossibleSkinColors(parent1, parent2) {
       "dark": ["medium-dark", "dark"]
   };
 
-  const offspringColors = new Set(); // Using a Set to avoid duplicates
+  const offspringColors = new Set();
 
   // Get possible offspring colors from the skin color map
   const parent1Colors = skinColorMap[parent1] || [];
@@ -52,7 +52,7 @@ function getPossibleSkinColors(parent1, parent2) {
   parent1Colors.forEach(color => offspringColors.add(color));
   parent2Colors.forEach(color => offspringColors.add(color));
 
-  return Array.from(offspringColors); // Return as an array
+  return Array.from(offspringColors);
 }
 
 // Function to generate offspring colors based on possible colors
@@ -76,7 +76,7 @@ function calculateAverageColor(colors) {
   };
 
   const total = colors.reduce((sum, color) => sum + (colorValues[color] || 0), 0);
-  return (total / colors.length).toFixed(2); // Round to two decimal places
+  return (total / colors.length).toFixed(2);
 }
 
 // Function to calculate the range of skin colors based on their values
@@ -98,7 +98,7 @@ function calculateColorRange(colors) {
 // Function to display the results in the HTML
 function displaySkinResults(offspringColors) {
   const skinResultSection = document.getElementById("results-skin");
-  skinResultSection.innerHTML = ''; // Clear previous results
+  skinResultSection.innerHTML = '';
 
   // Display each offspring color
   offspringColors.forEach((color, index) => {
