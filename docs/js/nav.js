@@ -3,17 +3,18 @@ function createNav() {
   nav.className = 'main-nav';
 
   const ul = document.createElement('ul');
+  ul.className = 'nav-list';
 
   const navItems = [
-    { text: 'Home', href: '../index.html' },
-    { text: 'Blood Types', href: 'blood-types.html' },
-    { text: 'Eye Color', href: 'eye-color.html' },
-    { text: 'Skin Color', href: 'skin-color.html' },
-    { text: 'Height', href: 'height.html' },
-    { text: 'Hair Color', href: 'hair-color.html' },
+    { text: 'Home', href: '/' },
+    { text: 'Blood Types', href: '/pages/blood-types.html' },
+    { text: 'Eye Color', href: '/pages/eye-color.html' },
+    { text: 'Skin Color', href: '/pages/skin-color.html' },
+    { text: 'Height', href: '/pages/height.html' },
+    { text: 'Hair Color', href: '/pages/hair-color.html' },
   ];
 
-  const currentPath = window.location.pathname.split('/').pop();
+  const currentPath = window.location.pathname;
 
   navItems.forEach(item => {
     const li = document.createElement('li');
@@ -21,9 +22,9 @@ function createNav() {
     a.href = item.href;
     a.textContent = item.text;
 
-    // Highlight current page
+    // Active page highlighting
     if (item.href === currentPath) {
-      a.className = 'active';
+      a.classList.add('active');
     }
 
     li.appendChild(a);
@@ -35,10 +36,9 @@ function createNav() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const oldNav = document.querySelector('nav');
-  if (oldNav) {
-    const newNav = createNav();
-    oldNav.replaceWith(newNav);
+  const placeholder = document.getElementById('nav-placeholder');
+  if (placeholder) {
+    placeholder.replaceWith(createNav());
   } else {
     document.body.prepend(createNav());
   }

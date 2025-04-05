@@ -17,31 +17,42 @@ header {
 }
 
 /* Navigation Bar */
-nav {
+nav.main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
   background-color: #333;
+  padding: 10px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-nav ul {
+nav ul.nav-list {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 1.5rem;
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
+nav ul.nav-list li a {
   color: #ffffff;
   text-decoration: none;
-  padding: 10px;
+  padding: 10px 16px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.2s;
 }
 
-nav ul li a:hover {
+nav ul.nav-list li a:hover {
   background-color: #4CAF50;
-  border-radius: 4px;
+  transform: translateY(-2px);
+}
+
+nav ul.nav-list li a.active {
+  background: linear-gradient(to right, #4CAF50, #2196F3);
+  color: white;
+  font-weight: bold;
 }
 
 /* Main Content */
@@ -53,6 +64,7 @@ h2 {
   color: #4CAF50;
 }
 
+/* Buttons */
 button {
   background-color: #4CAF50;
   color: white;
@@ -60,6 +72,7 @@ button {
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 4px;
+  transition: background-color 0.2s ease;
 }
 
 button:hover {
@@ -81,14 +94,17 @@ footer {
 label, select, input[type="number"] {
   display: block;
   margin: 10px 0;
+  width: 100%;
+  max-width: 400px;
 }
 
+/* Results List */
 ul#results, ul#results-skin, ul#results-height {
   list-style-type: disc;
   padding-left: 20px;
 }
 
-/* Eye Color Sampler*/
+/* Trait Color Sampler */
 #color-samples {
   display: flex;
   flex-wrap: wrap;
