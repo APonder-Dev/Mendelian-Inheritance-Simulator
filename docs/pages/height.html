@@ -7,15 +7,21 @@
     <link rel="stylesheet" href="../css/style.css" id="light-mode-style">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/darkmode.css" id="dark-mode-style" disabled>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body data-theme="light">
     <div id="nav-placeholder"></div>
 
     <header class="bg-primary text-white py-6 shadow-md">
         <div class="container">
-            <h1 class="text-4xl font-bold">Height Inheritance</h1>
+            <h1 class="text-4xl font-bold bg-[linear-gradient(90deg,#4CAF50,#2196F3)] text-transparent bg-clip-text">
+                Height Inheritance
+            </h1>
             <p class="text-lg mt-2">Learn about height inheritance patterns in children based on their parents' heights.</p>
-            <button id="darkModeToggle" class="btn btn-outline mt-4">Toggle Dark Mode</button>
+            <button id="darkModeToggle" aria-label="Toggle Dark Mode">
+                <i data-lucide="moon"></i>
+            </button>              
         </div>
     </header>
 

@@ -7,15 +7,21 @@
     <link rel="stylesheet" href="../css/style.css" id="light-mode-style">
     <link rel="stylesheet" href="../css/darkmode.css" id="dark-mode-style" disabled>
     <link rel="stylesheet" href="../css/layout.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body data-theme="bloodType">
     <div id="nav-placeholder"></div>
 
     <header class="bg-primary text-white py-6 shadow-md">
         <div class="container">
-            <h1 class="text-4xl font-bold">Blood Type Inheritance</h1>
+            <h1 class="text-4xl font-bold bg-[linear-gradient(90deg,#4CAF50,#2196F3)] text-transparent bg-clip-text">
+                Blood Type Inheritance
+            </h1>
             <p class="text-lg mt-2">Learn about blood types and their inheritance patterns.</p>
-            <button id="darkModeToggle" class="btn btn-outline mt-4">Toggle Dark Mode</button>
+            <button id="darkModeToggle" aria-label="Toggle Dark Mode">
+                <i data-lucide="moon"></i>
+            </button>
         </div>
     </header>
 
