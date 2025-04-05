@@ -5,78 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skin Color Inheritance Tester</title>
   <link rel="stylesheet" href="../css/style.css" id="light-mode-style">
-  <link rel="stylesheet" href="../css/darkmode.css" id="dark-mode-style" disabled> 
-  <link rel="stylesheet" href="../css/layout.css">  
+  <link rel="stylesheet" href="../css/darkmode.css" id="dark-mode-style" disabled>
+  <link rel="stylesheet" href="../css/layout.css">
 </head>
-<body data-page-id="skinColor">
-  <header>
-    <h1>Skin Color Inheritance Tester</h1>
-    <button id="darkModeToggle">Toggle Dark Mode</button>
-  </header>
-  
-  <main class="container">
-    <div class="left-column">
-        <section>
-            <h2>Understanding Skin Color Inheritance</h2>
-            <p>
-                Skin color inheritance is determined by multiple genes that influence melanin production in the skin. 
-                This tester simulates possible skin colors for children based on the selected skin colors of their parents. 
-                The colors are generally categorized into five groups: Light, Medium Light, Medium, Medium Dark, and Dark.
-            </p>
-            <p>
-                The combination of genes from both parents contributes to the range of skin colors that children can inherit. 
-                For example, a child with one light-skinned and one dark-skinned parent may inherit a skin tone that is medium or somewhere in between.
-            </p>
-        </section>
+<body data-page-id="skinColor" data-theme="light">
+  <div id="nav-placeholder"></div>
 
-        <section>
-            <h3>Visual Representation of Skin Colors</h3>
-            <div id="color-samples">
-                <div class="color-sample" id="light-sample" style="background-color: #f4c2c2;">Light</div>
-                <div class="color-sample" id="medium-light-sample" style="background-color: #d9b68c;">Medium Light</div>
-                <div class="color-sample" id="medium-sample" style="background-color: #a67c4d;">Medium</div>
-                <div class="color-sample" id="medium-dark-sample" style="background-color: #6f4c3e;">Medium Dark</div>
-                <div class="color-sample" id="dark-sample" style="background-color: #3b2b2b;">Dark</div>
-            </div>
-        </section>
+  <header class="bg-primary text-white py-6 shadow-md">
+    <div class="container">
+      <h1 class="text-4xl font-bold">Skin Color Inheritance Tester</h1>
+      <button id="darkModeToggle" class="btn btn-outline mt-4">Toggle Dark Mode</button>
+    </div>
+  </header>
+
+  <main class="container grid grid-cols-1 md:grid-cols-2 gap-8 py-10">
+    <div class="left-column">
+      <section class="mb-6">
+        <h2 class="text-2xl font-semibold mb-2">Understanding Skin Color Inheritance</h2>
+        <p>
+          Skin color inheritance is determined by multiple genes that influence melanin production in the skin. 
+          This tester simulates possible skin colors for children based on the selected skin colors of their parents. 
+          The colors are generally categorized into five groups: Light, Medium Light, Medium, Medium Dark, and Dark.
+        </p>
+        <p class="mt-2">
+          The combination of genes from both parents contributes to the range of skin colors that children can inherit. 
+          For example, a child with one light-skinned and one dark-skinned parent may inherit a skin tone that is medium or somewhere in between.
+        </p>
+      </section>
+
+      <section>
+        <h3 class="text-xl font-medium mb-2">Visual Representation of Skin Colors</h3>
+        <div id="color-samples" class="grid grid-cols-2 gap-3">
+          <div class="color-sample p-2 rounded shadow text-center text-sm text-white" style="background-color: #f4c2c2;">Light</div>
+          <div class="color-sample p-2 rounded shadow text-center text-sm text-white" style="background-color: #d9b68c;">Medium Light</div>
+          <div class="color-sample p-2 rounded shadow text-center text-sm text-white" style="background-color: #a67c4d;">Medium</div>
+          <div class="color-sample p-2 rounded shadow text-center text-sm text-white" style="background-color: #6f4c3e;">Medium Dark</div>
+          <div class="color-sample p-2 rounded shadow text-center text-sm text-white" style="background-color: #3b2b2b;">Dark</div>
+        </div>
+      </section>
     </div>
 
     <div class="right-column">
-        <section>
-            <h2>Select Parent Skin Colors</h2>
-            <label for="parent1-skin">Parent 1 Skin Color:</label>
-            <select id="parent1-skin">
-                <option value="light">Light</option>
-                <option value="medium-light">Medium Light</option>
-                <option value="medium">Medium</option>
-                <option value="medium-dark">Medium Dark</option>
-                <option value="dark">Dark</option>
-            </select>
+      <section class="mb-6">
+        <h2 class="text-2xl font-semibold mb-2">Select Parent Skin Colors</h2>
+        <label for="parent1-skin" class="block mt-2">Parent 1 Skin Color:</label>
+        <select id="parent1-skin" class="w-full p-2 border rounded">
+          <option value="light">Light</option>
+          <option value="medium-light">Medium Light</option>
+          <option value="medium">Medium</option>
+          <option value="medium-dark">Medium Dark</option>
+          <option value="dark">Dark</option>
+        </select>
 
-            <label for="parent2-skin">Parent 2 Skin Color:</label>
-            <select id="parent2-skin">
-                <option value="light">Light</option>
-                <option value="medium-light">Medium Light</option>
-                <option value="medium">Medium</option>
-                <option value="medium-dark">Medium Dark</option>
-                <option value="dark">Dark</option>
-            </select>
+        <label for="parent2-skin" class="block mt-4">Parent 2 Skin Color:</label>
+        <select id="parent2-skin" class="w-full p-2 border rounded">
+          <option value="light">Light</option>
+          <option value="medium-light">Medium Light</option>
+          <option value="medium">Medium</option>
+          <option value="medium-dark">Medium Dark</option>
+          <option value="dark">Dark</option>
+        </select>
+        <label for="child-count" class="block mt-4">Number of Children:</label>
+        <input type="number" id="child-count" value="4" min="1" max="12" class="w-full p-2 border rounded">
+        <button id="calculate-skin" class="btn btn-primary mt-4">Calculate Possible Skin Colors</button>
+      </section>
 
-            <button id="calculate-skin">Calculate Possible Skin Colors</button>
-        </section>
+      <section class="mb-6">
+        <h3 class="text-xl font-medium mb-2">Possible Skin Colors for Children:</h3>
+        <ul id="results-skin" class="list-disc list-inside"></ul>
+      </section>
 
-        <section>
-            <h3>Possible Skin Colors for Children:</h3>
-            <ul id="results-skin"></ul>
-        </section>
-
-        <section>
-            <h3>Analysis</h3>
-            <p id="average-result"></p>
-            <p id="range-result"></p>
-        </section>
+      <section>
+        <h3 class="text-xl font-medium mb-2">Analysis</h3>
+        <p id="average-result" class="mb-2"></p>
+        <p id="range-result"></p>
+      </section>
     </div>
-</main>
+  </main>
+
+  <div id="footer-placeholder"></div>
 
   <script src="../js/script.js"></script>
   <script src="../js/darkmode.js"></script>

@@ -1,117 +1,116 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    color: #E0E0E0;
-    background-color: #121212;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-  }
-  
-  /* Header */
-  header {
-    background-color: #1E88E5;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  /* Navigation Bar */
-  nav {
-    background-color: #1E1E1E;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav ul li {
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    color: #E0E0E0;
-    text-decoration: none;
-    padding: 10px;
-  }
-  
-  nav ul li a:hover {
-    background-color: #1E88E5;
-    border-radius: 4px;
-  }
-  
-  /* Main Content */
-  main {
-    padding: 20px;
-  }
-  
-  h2 {
-    color: #64B5F6;
-  }
-  
-  button {
-    background-color: #1E88E5;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  button:hover {
-    background-color: #1976D2;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #1E1E1E;
-    color: #E0E0E0;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  /* Form and Results */
-  label, select, input[type="number"] {
-    display: block;
-    margin: 10px 0;
-  }
-  
-  ul#results, ul#results-skin, ul#results-height {
-    list-style-type: disc;
-    padding-left: 20px;
-    color: #BDBDBD;
-  }
-  
+  font-family: Arial, sans-serif;
+  color: #E0E0E0;
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
 
-  /* Eye Color Sampler*/
-  #color-samples {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 20px 0;
-  }
-  
-  .color-sample {
-    width: 80px;
-    height: 50px;
-    color: white;
-    text-align: center;
-    line-height: 50px;
-    font-weight: bold;
-    border-radius: 5px;
-    border: 1px solid #000000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-  }
-  
-  .color-sample:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-  }
+/* Header */
+header {
+  background-color: #1E88E5;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #1E1E1E;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #E0E0E0;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #1E88E5;
+  border-radius: 4px;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+}
+
+h2 {
+  color: #64B5F6;
+}
+
+button {
+  background-color: #1E88E5;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #1976D2;
+}
+
+/* Footer */
+footer {
+  background-color: #1E1E1E;
+  color: #E0E0E0;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Form and Results */
+label, select, input[type="number"] {
+  display: block;
+  margin: 10px 0;
+}
+
+ul#results, ul#results-skin, ul#results-height {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #BDBDBD;
+}
+
+/* Eye Color Sampler*/
+#color-samples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.color-sample {
+  width: 80px;
+  height: 50px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.color-sample:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}

@@ -5,110 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hair Color Inheritance Tester</title>
     <link rel="stylesheet" href="../css/style.css" id="light-mode-style">
-    <link rel="stylesheet" href="../css/layout.css"> 
-    <link rel="stylesheet" href="../css/darkmode.css" id="dark-mode-style" disabled>   
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/darkmode.css" id="dark-mode-style" disabled>
 </head>
-<body data-page-id="hairColor">
-    <header>
-        <h1>Hair Color Inheritance Tester</h1>
-        <button id="darkModeToggle">Toggle Dark Mode</button>
+<body data-page-id="hairColor" data-theme="light">
+    <div id="nav-placeholder"></div>
+
+    <header class="bg-primary text-white py-6 shadow-md">
+        <div class="container">
+            <h1 class="text-4xl font-bold">Hair Color Inheritance Tester</h1>
+            <button id="darkModeToggle" class="btn btn-outline mt-4">Toggle Dark Mode</button>
+        </div>
     </header>
 
-    <main class="container">
+    <main class="container grid grid-cols-1 md:grid-cols-2 gap-8 py-10">
         <div class="left-column">
-            <section>
-                <h2>Understanding Hair Color Inheritance</h2>
+            <section class="mb-6">
+                <h2 class="text-2xl font-semibold mb-2">Understanding Hair Color Inheritance</h2>
                 <p>
                     Hair color inheritance is determined by multiple genes, leading to a variety of hair colors in offspring.
                     Common categories include Black, Brown, Blonde, Red, and others.
                 </p>
-                <p>
+                <p class="mt-2">
                     The combination of alleles from both parents determines the potential hair colors that their children may inherit.
                 </p>
             </section>
 
             <section>
-                <h3>Visual Representation of Hair Colors</h3>
-                <div id="color-samples">
-                    <div class="color-sample" id="black-sample" style="background-color: #1C1C1C;">Black</div>
-                    <div class="color-sample" id="brown-sample" style="background-color: #8B4513;">Brown</div>
-                    <div class="color-sample" id="medium-brown-sample" style="background-color: #7B4B3A;">Medium Brown</div>
-                    <div class="color-sample" id="light-brown-sample" style="background-color: #A0522D;">Light Brown</div>
-                    <div class="color-sample" id="blonde-sample" style="background-color: #FFD700;">Blonde</div>
-                    <div class="color-sample" id="platinum-blonde-sample" style="background-color: #E9E9E9;">Platinum Blonde</div>
-                    <div class="color-sample" id="red-sample" style="background-color: #FF4500;">Red</div>
-                    <div class="color-sample" id="strawberry-blonde-sample" style="background-color: #FFB3B3;">Strawberry Blonde</div>
-                    <div class="color-sample" id="grey-sample" style="background-color: #A9A9A9;">Grey</div>
-                    <div class="color-sample" id="white-sample" style="background-color: #FFFFFF;">White</div>
+                <h3 class="text-xl font-medium mb-2">Visual Representation of Hair Colors</h3>
+                <div id="color-samples" class="grid grid-cols-2 gap-3">
+                    <div class="color-sample p-2 rounded shadow text-center text-white" style="background-color: #1C1C1C;">Black</div>
+                    <div class="color-sample p-2 rounded shadow text-center text-white" style="background-color: #8B4513;">Brown</div>
+                    <div class="color-sample p-2 rounded shadow text-center text-white" style="background-color: #7B4B3A;">Medium Brown</div>
+                    <div class="color-sample p-2 rounded shadow text-center text-white" style="background-color: #A0522D;">Light Brown</div>
+                    <div class="color-sample p-2 rounded shadow text-center" style="background-color: #FFD700;">Blonde</div>
+                    <div class="color-sample p-2 rounded shadow text-center" style="background-color: #E9E9E9;">Platinum Blonde</div>
+                    <div class="color-sample p-2 rounded shadow text-center text-white" style="background-color: #FF4500;">Red</div>
+                    <div class="color-sample p-2 rounded shadow text-center" style="background-color: #FFB3B3;">Strawberry Blonde</div>
+                    <div class="color-sample p-2 rounded shadow text-center text-white" style="background-color: #A9A9A9;">Grey</div>
+                    <div class="color-sample p-2 rounded shadow text-center" style="background-color: #FFFFFF;">White</div>
                 </div>
             </section>
         </div>
 
         <div class="right-column">
-            <section>
-                <h2>Select Parent Hair Colors</h2>
-                <label for="parent1Allele1">Parent 1 Hair Color Allele 1:</label>
-                <select id="parent1Allele1">
-                    <option value="b">Black</option>
-                    <option value="br">Brown</option>
-                    <option value="mb">Medium Brown</option>
-                    <option value="lb">Light Brown</option>
-                    <option value="bl">Blonde</option>
-                    <option value="pb">Platinum Blonde</option>
-                    <option value="r">Red</option>
-                    <option value="sb">Strawberry Blonde</option>
-                    <option value="g">Grey</option>
-                    <option value="w">White</option>
-                </select>
+            <section class="mb-6">
+                <h2 class="text-2xl font-semibold mb-2">Select Parent Hair Colors</h2>
+                <div class="grid gap-4">
+                    <div>
+                        <label for="parent1Allele1" class="block mb-1">Parent 1 Hair Color Allele 1:</label>
+                        <select id="parent1Allele1" class="w-full p-2 border rounded">
+                            <option value="b">Black</option>
+                            <option value="br">Brown</option>
+                            <option value="mb">Medium Brown</option>
+                            <option value="lb">Light Brown</option>
+                            <option value="bl">Blonde</option>
+                            <option value="pb">Platinum Blonde</option>
+                            <option value="r">Red</option>
+                            <option value="sb">Strawberry Blonde</option>
+                            <option value="g">Grey</option>
+                            <option value="w">White</option>
+                        </select>
+                    </div>
 
-                <label for="parent1Allele2">Parent 1 Hair Color Allele 2:</label>
-                <select id="parent1Allele2">
-                    <option value="b">Black</option>
-                    <option value="br">Brown</option>
-                    <option value="mb">Medium Brown</option>
-                    <option value="lb">Light Brown</option>
-                    <option value="bl">Blonde</option>
-                    <option value="pb">Platinum Blonde</option>
-                    <option value="r">Red</option>
-                    <option value="sb">Strawberry Blonde</option>
-                    <option value="g">Grey</option>
-                    <option value="w">White</option>
-                </select>
+                    <div>
+                        <label for="parent1Allele2" class="block mb-1">Parent 1 Hair Color Allele 2:</label>
+                        <select id="parent1Allele2" class="w-full p-2 border rounded">
+                            <option value="b">Black</option>
+                            <option value="br">Brown</option>
+                            <option value="mb">Medium Brown</option>
+                            <option value="lb">Light Brown</option>
+                            <option value="bl">Blonde</option>
+                            <option value="pb">Platinum Blonde</option>
+                            <option value="r">Red</option>
+                            <option value="sb">Strawberry Blonde</option>
+                            <option value="g">Grey</option>
+                            <option value="w">White</option>
+                        </select>
+                    </div>
 
-                <label for="parent2Allele1">Parent 2 Hair Color Allele 1:</label>
-                <select id="parent2Allele1">
-                    <option value="b">Black</option>
-                    <option value="br">Brown</option>
-                    <option value="mb">Medium Brown</option>
-                    <option value="lb">Light Brown</option>
-                    <option value="bl">Blonde</option>
-                    <option value="pb">Platinum Blonde</option>
-                    <option value="r">Red</option>
-                    <option value="sb">Strawberry Blonde</option>
-                    <option value="g">Grey</option>
-                    <option value="w">White</option>
-                </select>
+                    <div>
+                        <label for="parent2Allele1" class="block mb-1">Parent 2 Hair Color Allele 1:</label>
+                        <select id="parent2Allele1" class="w-full p-2 border rounded">
+                            <option value="b">Black</option>
+                            <option value="br">Brown</option>
+                            <option value="mb">Medium Brown</option>
+                            <option value="lb">Light Brown</option>
+                            <option value="bl">Blonde</option>
+                            <option value="pb">Platinum Blonde</option>
+                            <option value="r">Red</option>
+                            <option value="sb">Strawberry Blonde</option>
+                            <option value="g">Grey</option>
+                            <option value="w">White</option>
+                        </select>
+                    </div>
 
-                <label for="parent2Allele2">Parent 2 Hair Color Allele 2:</label>
-                <select id="parent2Allele2">
-                    <option value="b">Black</option>
-                    <option value="br">Brown</option>
-                    <option value="mb">Medium Brown</option>
-                    <option value="lb">Light Brown</option>
-                    <option value="bl">Blonde</option>
-                    <option value="pb">Platinum Blonde</option>
-                    <option value="r">Red</option>
-                    <option value="sb">Strawberry Blonde</option>
-                    <option value="g">Grey</option>
-                    <option value="w">White</option>
-                </select>
+                    <div>
+                        <label for="parent2Allele2" class="block mb-1">Parent 2 Hair Color Allele 2:</label>
+                        <select id="parent2Allele2" class="w-full p-2 border rounded">
+                            <option value="b">Black</option>
+                            <option value="br">Brown</option>
+                            <option value="mb">Medium Brown</option>
+                            <option value="lb">Light Brown</option>
+                            <option value="bl">Blonde</option>
+                            <option value="pb">Platinum Blonde</option>
+                            <option value="r">Red</option>
+                            <option value="sb">Strawberry Blonde</option>
+                            <option value="g">Grey</option>
+                            <option value="w">White</option>
+                        </select>
+                    </div>
+                    <label for="child-count" class="block mt-4">Number of Children:</label>
+                    <input type="number" id="child-count" value="4" min="1" max="12" class="w-full p-2 border rounded">                  
+                    <button id="calculate" onclick="testOffspringHairColor()" class="btn btn-primary">Calculate Possible Hair Colors</button>
+                </div>
 
-                <button id="calculate" onclick="testOffspringHairColor()">Calculate Possible Hair Colors</button>
-                <h3>Possible Hair Colors for Children:</h3>
-                <div id="results"></div>
+                <h3 class="text-xl font-medium mt-6">Possible Hair Colors for Children:</h3>
+                <div id="results" class="mt-2 text-lg"></div>
             </section>
         </div>
     </main>
+
+    <div id="footer-placeholder"></div>
 
     <script src="../js/script.js"></script>
     <script src="../js/darkmode.js"></script>

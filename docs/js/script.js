@@ -1,29 +1,44 @@
-// Main script.js
 document.addEventListener("DOMContentLoaded", () => {
-  // Set up Dark Mode Toggle
-  const darkModeToggle = document.getElementById("darkModeToggle");
-  darkModeToggle.addEventListener("click", () => toggleDarkMode());
+  // Load preferred theme from localStorage
+  const savedTheme = localStorage.getItem("theme") || "light";
+  applyTheme(savedTheme);
 
-  // Load specific scripts based on page ID
+  // Set up Dark Mode Toggle (if button exists)
+  const darkModeToggle = document.getElementById("darkModeToggle");
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener("click", () => {
+      const currentTheme = document.body.getAttribute("data-theme");
+      const newTheme = currentTheme === "light" ? "dark" : "light";
+      applyTheme(newTheme);
+      localStorage.setItem("theme", newTheme);
+    });
+  }
+
+  // Load specific trait script dynamically
   const pageId = document.body.getAttribute("data-page-id");
   if (pageId) loadPageScript(pageId);
 });
 
-function toggleDarkMode() {
-  const theme = document.body.getAttribute("data-theme");
-  if (theme === "light") {
-    document.getElementById("dark-mode-style").disabled = false;
-    document.getElementById("light-mode-style").disabled = true;
+// Theme switcher
+function applyTheme(theme) {
+  const lightStyle = document.getElementById("light-mode-style");
+  const darkStyle = document.getElementById("dark-mode-style");
+
+  if (theme === "dark") {
+    darkStyle.disabled = false;
+    lightStyle.disabled = true;
     document.body.setAttribute("data-theme", "dark");
   } else {
-    document.getElementById("dark-mode-style").disabled = true;
-    document.getElementById("light-mode-style").disabled = false;
+    darkStyle.disabled = true;
+    lightStyle.disabled = false;
     document.body.setAttribute("data-theme", "light");
   }
 }
 
+// Load specific page logic dynamically
 function loadPageScript(pageId) {
   const script = document.createElement("script");
   script.src = `js/alleles/${pageId}.js`;
+  script.defer = true;
   document.body.appendChild(script);
 }

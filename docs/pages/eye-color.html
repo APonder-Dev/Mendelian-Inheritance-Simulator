@@ -5,106 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eye Color Inheritance Tester</title>
     <link rel="stylesheet" href="../css/style.css" id="light-mode-style">
-    <link rel="stylesheet" href="../css/darkmode.css" id="dark-mode-style" disabled> 
-    <link rel="stylesheet" href="../css/layout.css">  
+    <link rel="stylesheet" href="../css/darkmode.css" id="dark-mode-style" disabled>
+    <link rel="stylesheet" href="../css/layout.css">
 </head>
-<body data-page-id="eyeColor">
-    <header>
-        <h1>Eye Color Inheritance Tester</h1>
-        <button id="darkModeToggle">Toggle Dark Mode</button>
+<body data-page-id="eyeColor" data-theme="light">
+    <div id="nav-placeholder"></div>
+
+    <header class="bg-primary text-white py-6 shadow-md">
+        <div class="container">
+            <h1 class="text-4xl font-bold">Eye Color Inheritance Tester</h1>
+            <button id="darkModeToggle" class="btn btn-outline mt-4">Toggle Dark Mode</button>
+        </div>
     </header>
 
-    <main class="container">
+    <main class="container grid grid-cols-1 md:grid-cols-2 gap-8 py-10">
         <div class="left-column">
-            <section>
-                <h2>Understanding Eye Color Inheritance</h2>
+            <section class="mb-6">
+                <h2 class="text-2xl font-semibold mb-2">Understanding Eye Color Inheritance</h2>
                 <p>
                     Eye color inheritance is influenced by multiple genes, leading to a variety of eye colors in offspring.
                     This tester simulates possible eye colors for children based on the selected eye colors of their parents.
                     The main categories typically include Brown, Blue, Green, and Hazel.
                 </p>
-                <p>
+                <p class="mt-2">
                     The combination of alleles from both parents determines the potential eye colors that their children may inherit.
                 </p>
             </section>
 
             <section>
-                <h3>Visual Representation of Eye Colors</h3>
-                <div id="color-samples">
-                    <div class="color-sample" id="brown-sample" style="background-color: #8B4513;">Brown</div>
-                    <div class="color-sample" id="medium-brown-sample" style="background-color: #7B4B3A;">Medium Brown</div>
-                    <div class="color-sample" id="dark-brown-sample" style="background-color: #4B3A29;">Dark Brown</div>
-                    <div class="color-sample" id="blue-sample" style="background-color: #00BFFF;">Blue</div>
-                    <div class="color-sample" id="green-sample" style="background-color: #32CD32;">Green</div>
-                    <div class="color-sample" id="hazel-sample" style="background-color: #A0522D;">Hazel</div>
-                    <div class="color-sample" id="turquoise-sample" style="background-color: #40E0D0;">Turquoise</div>
-                    <div class="color-sample" id="violet-sample" style="background-color: #8A2BE2;">Violet</div>
-                    <div class="color-sample" id="amber-sample" style="background-color: #FFBF00;">Amber</div>
+                <h3 class="text-xl font-medium mb-2">Visual Representation of Eye Colors</h3>
+                <div id="color-samples" class="grid grid-cols-2 gap-3">
+                    <div class="color-sample p-2 rounded shadow text-center text-white" style="background-color: #8B4513;">Brown</div>
+                    <div class="color-sample p-2 rounded shadow text-center text-white" style="background-color: #7B4B3A;">Medium Brown</div>
+                    <div class="color-sample p-2 rounded shadow text-center text-white" style="background-color: #4B3A29;">Dark Brown</div>
+                    <div class="color-sample p-2 rounded shadow text-center" style="background-color: #00BFFF;">Blue</div>
+                    <div class="color-sample p-2 rounded shadow text-center" style="background-color: #32CD32;">Green</div>
+                    <div class="color-sample p-2 rounded shadow text-center text-white" style="background-color: #A0522D;">Hazel</div>
+                    <div class="color-sample p-2 rounded shadow text-center" style="background-color: #40E0D0;">Turquoise</div>
+                    <div class="color-sample p-2 rounded shadow text-center text-white" style="background-color: #8A2BE2;">Violet</div>
+                    <div class="color-sample p-2 rounded shadow text-center" style="background-color: #FFBF00;">Amber</div>
                 </div>
             </section>
         </div>
 
         <div class="right-column">
-            <section>
-                <h2>Select Parent Eye Colors</h2>
-                <label for="parent1Allele1">Parent 1 Eye Color Allele 1:</label>
-                <select id="parent1Allele1">
-                    <option value="b">Brown</option>
-                    <option value="g">Green</option>
-                    <option value="h">Hazel</option>
-                    <option value="l">Blue</option>
-                    <option value="m">Medium Brown</option>
-                    <option value="d">Dark Brown</option>
-                    <option value="t">Turquoise</option>
-                    <option value="v">Violet</option>
-                    <option value="a">Amber</option>
-                </select>
+            <section class="mb-6">
+                <h2 class="text-2xl font-semibold mb-2">Select Parent Eye Colors</h2>
+                <div class="grid gap-4">
+                    <div>
+                        <label for="parent1Allele1" class="block mb-1">Parent 1 Eye Color Allele 1:</label>
+                        <select id="parent1Allele1" class="w-full p-2 border rounded">
+                            <option value="b">Brown</option>
+                            <option value="g">Green</option>
+                            <option value="h">Hazel</option>
+                            <option value="l">Blue</option>
+                            <option value="m">Medium Brown</option>
+                            <option value="d">Dark Brown</option>
+                            <option value="t">Turquoise</option>
+                            <option value="v">Violet</option>
+                            <option value="a">Amber</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="parent1Allele2" class="block mb-1">Parent 1 Eye Color Allele 2:</label>
+                        <select id="parent1Allele2" class="w-full p-2 border rounded">
+                            <option value="b">Brown</option>
+                            <option value="g">Green</option>
+                            <option value="h">Hazel</option>
+                            <option value="l">Blue</option>
+                            <option value="m">Medium Brown</option>
+                            <option value="d">Dark Brown</option>
+                            <option value="t">Turquoise</option>
+                            <option value="v">Violet</option>
+                            <option value="a">Amber</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="parent2Allele1" class="block mb-1">Parent 2 Eye Color Allele 1:</label>
+                        <select id="parent2Allele1" class="w-full p-2 border rounded">
+                            <option value="b">Brown</option>
+                            <option value="g">Green</option>
+                            <option value="h">Hazel</option>
+                            <option value="l">Blue</option>
+                            <option value="m">Medium Brown</option>
+                            <option value="d">Dark Brown</option>
+                            <option value="t">Turquoise</option>
+                            <option value="v">Violet</option>
+                            <option value="a">Amber</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="parent2Allele2" class="block mb-1">Parent 2 Eye Color Allele 2:</label>
+                        <select id="parent2Allele2" class="w-full p-2 border rounded">
+                            <option value="b">Brown</option>
+                            <option value="g">Green</option>
+                            <option value="h">Hazel</option>
+                            <option value="l">Blue</option>
+                            <option value="m">Medium Brown</option>
+                            <option value="d">Dark Brown</option>
+                            <option value="t">Turquoise</option>
+                            <option value="v">Violet</option>
+                            <option value="a">Amber</option>
+                        </select>
+                    </div>
+                    <label for="child-count" class="block mt-4">Number of Children:</label>
+                    <input type="number" id="child-count" value="4" min="1" max="12" class="w-full p-2 border rounded">
+                    <button id="calculate" onclick="testOffspringEyeColor()" class="btn btn-primary">Calculate Possible Eye Colors</button>
+                </div>
 
-                <label for="parent1Allele2">Parent 1 Eye Color Allele 2:</label>
-                <select id="parent1Allele2">
-                    <option value="b">Brown</option>
-                    <option value="g">Green</option>
-                    <option value="h">Hazel</option>
-                    <option value="l">Blue</option>
-                    <option value="m">Medium Brown</option>
-                    <option value="d">Dark Brown</option>
-                    <option value="t">Turquoise</option>
-                    <option value="v">Violet</option>
-                    <option value="a">Amber</option>
-                </select>
-
-                <label for="parent2Allele1">Parent 2 Eye Color Allele 1:</label>
-                <select id="parent2Allele1">
-                    <option value="b">Brown</option>
-                    <option value="g">Green</option>
-                    <option value="h">Hazel</option>
-                    <option value="l">Blue</option>
-                    <option value="m">Medium Brown</option>
-                    <option value="d">Dark Brown</option>
-                    <option value="t">Turquoise</option>
-                    <option value="v">Violet</option>
-                    <option value="a">Amber</option>
-                </select>
-
-                <label for="parent2Allele2">Parent 2 Eye Color Allele 2:</label>
-                <select id="parent2Allele2">
-                    <option value="b">Brown</option>
-                    <option value="g">Green</option>
-                    <option value="h">Hazel</option>
-                    <option value="l">Blue</option>
-                    <option value="m">Medium Brown</option>
-                    <option value="d">Dark Brown</option>
-                    <option value="t">Turquoise</option>
-                    <option value="v">Violet</option>
-                    <option value="a">Amber</option>
-                </select>
-
-                <button id="calculate" onclick="testOffspringEyeColor()">Calculate Possible Eye Colors</button>
-                <h3>Possible Eye Colors for Children:</h3>
-                <div id="results"></div>
+                <h3 class="text-xl font-medium mt-6">Possible Eye Colors for Children:</h3>
+                <div id="results" class="mt-2 text-lg"></div>
             </section>
         </div>
     </main>
+
+    <div id="footer-placeholder"></div>
 
     <script src="../js/script.js"></script>
     <script src="../js/darkmode.js"></script>

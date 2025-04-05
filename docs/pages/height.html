@@ -5,50 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Height Inheritance</title>
     <link rel="stylesheet" href="../css/style.css" id="light-mode-style">
-    <link rel="stylesheet" href="../css/layout.css"> 
-    <link rel="stylesheet" href="../css/darkmode.css" id="dark-mode-style" disabled>  
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/darkmode.css" id="dark-mode-style" disabled>
 </head>
 <body data-theme="light">
-    <header>
-        <h1>Height Inheritance</h1>
-        <p>Learn about height inheritance patterns in children based on their parents' heights.</p>
-        <button id="darkModeToggle">Toggle Dark Mode</button>
+    <div id="nav-placeholder"></div>
+
+    <header class="bg-primary text-white py-6 shadow-md">
+        <div class="container">
+            <h1 class="text-4xl font-bold">Height Inheritance</h1>
+            <p class="text-lg mt-2">Learn about height inheritance patterns in children based on their parents' heights.</p>
+            <button id="darkModeToggle" class="btn btn-outline mt-4">Toggle Dark Mode</button>
+        </div>
     </header>
 
-    <main class="container">
+    <main class="container grid grid-cols-1 md:grid-cols-2 gap-8 py-10">
         <div class="left-column">
-            <section>
-                <h2>Understanding Height Inheritance</h2>
+            <section class="mb-6">
+                <h2 class="text-2xl font-semibold mb-2">Understanding Height Inheritance</h2>
                 <p>Height is influenced by a combination of genetic and environmental factors. While genetics play a significant role, other factors like nutrition and health during childhood can also affect a person's final height.</p>
-                <p>Typically, children inherit height traits from their parents. Studies show that the height of a child can generally fall within a range determined by their parents' heights.</p>
+                <p class="mt-2">Typically, children inherit height traits from their parents. Studies show that the height of a child can generally fall within a range determined by their parents' heights.</p>
             </section>
 
-            <section>
-                <h2>Height Inheritance Patterns</h2>
+            <section class="mb-6">
+                <h2 class="text-2xl font-semibold mb-2">Height Inheritance Patterns</h2>
                 <p>While each child is unique, it is common for their heights to be somewhat between the heights of their parents. Various studies suggest that children can be, on average, within 4 inches (10 cm) of the average of their parents' heights.</p>
             </section>
         </div>
 
         <div class="right-column">
-            <section>
-                <h2>Height Calculator</h2>
+            <section class="mb-6">
+                <h2 class="text-2xl font-semibold mb-2">Height Calculator</h2>
                 <p>Input the heights of the parents to see possible offspring heights:</p>
-                <form id="heightForm">
-                  <div>
-                    <label for="parent1-feet">Parent 1 Height:</label>
-                    <input type="number" id="parent1-feet" placeholder="Feet" min="0" max="15">
-                    <input type="number" id="parent1-inches" placeholder="Inches" min="0" max="10">
-                </div>
-                <div>
-                    <label for="parent2-feet">Parent 2 Height:</label>
-                    <input type="number" id="parent2-feet" placeholder="Feet" min="0" max="15">
-                    <input type="number" id="parent2-inches" placeholder="Inches" min="0" max="10">
-                </div>
-                <button type="button" id="calculateButton">Calculate Offspring Heights</button>
-                <div id="heightResult"></div>               
+                <form id="heightForm" class="mt-4 space-y-4">
+                    <div>
+                        <label for="parent1-feet" class="block mb-1">Parent 1 Height:</label>
+                        <div class="flex gap-2">
+                            <input type="number" id="parent1-feet" placeholder="Feet" min="0" max="15" class="p-2 border rounded w-1/2">
+                            <input type="number" id="parent1-inches" placeholder="Inches" min="0" max="11" class="p-2 border rounded w-1/2">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="parent2-feet" class="block mb-1">Parent 2 Height:</label>
+                        <div class="flex gap-2">
+                            <input type="number" id="parent2-feet" placeholder="Feet" min="0" max="15" class="p-2 border rounded w-1/2">
+                            <input type="number" id="parent2-inches" placeholder="Inches" min="0" max="11" class="p-2 border rounded w-1/2">
+                        </div>
+                    </div>
+                    <label for="child-count" class="block mt-4">Number of Children:</label>
+                    <input type="number" id="child-count" value="4" min="1" max="12" class="w-full p-2 border rounded">
+                    <button type="button" id="calculateButton" class="btn btn-primary mt-2">Calculate Offspring Heights</button>
+                </form>
+                <div id="heightResult" class="mt-4 text-lg font-medium"></div>
             </section>
         </div>
     </main>
+
+    <div id="footer-placeholder"></div>
 
     <script src="../js/script.js"></script>
     <script src="../js/darkmode.js"></script>

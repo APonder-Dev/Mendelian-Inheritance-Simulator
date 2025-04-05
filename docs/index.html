@@ -4,71 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mendelian Inheritance Simulator</title>
+
+  <!-- Modernized Styles -->
   <link rel="stylesheet" href="css/style.css" id="light-mode-style">
   <link rel="stylesheet" href="css/darkmode.css" id="dark-mode-style" disabled>
-  <link rel="stylesheet" href="css/layout.css"> 
+  <link rel="stylesheet" href="css/layout.css">
 </head>
+
 <body data-theme="light">
-  <header>
-    <h1>Mendelian Inheritance Simulator</h1>
-    <p>Explore different traits and their inheritance patterns based on Mendelian genetics.</p>
-    <button id="darkModeToggle">Toggle Dark Mode</button>
+  <!-- Injected Navigation -->
+  <div id="nav-placeholder"></div>
+
+  <header class="bg-primary text-white py-6 shadow-md">
+    <div class="container">
+      <h1 class="text-4xl font-bold">Mendelian Inheritance Simulator</h1>
+      <p class="text-lg mt-2">Explore different traits and their inheritance patterns based on Mendelian genetics.</p>
+      <button id="darkModeToggle" class="btn btn-outline mt-4">Toggle Dark Mode</button>
+    </div>
   </header>
-  
-  <main class="container">
+
+  <main class="container grid grid-cols-1 md:grid-cols-2 gap-8 py-10">
     <div class="left-column">
-        <section>
-            <h2>Welcome to the Inheritance Simulator!</h2>
-            <p>Select a trait from the navigation bar to test the inheritance of different characteristics.</p>
-        </section>
-
-        <section>
-            <h2>What is Mendelian Genetics?</h2>
-            <p>Mendelian genetics is the study of how traits are inherited from one generation to the next, based on the work of Gregor Mendel. Mendel discovered that traits are passed on through discrete units called alleles, which can be dominant or recessive.</p>
-            <p>In this simulator, you can explore how different traits are inherited based on the combinations of alleles from the parents.</p>
-        </section>
-
-        <section>
-          <h2>Common Traits Explored</h2>
-          
-          <h3>Eye Color</h3>
-          <p>Eye color is determined by multiple genes, with brown being the dominant trait over blue and green.</p>
-          
-          <h3>Skin Color</h3>
-          <p>Skin color is a polygenic trait influenced by several genes that produce a wide range of shades.</p>
-          
-          <h3>Height</h3>
-          <p>Height is also influenced by many genes and can be affected by environmental factors.</p>
-          
-          <h3>Blood Type</h3>
-          <p>
-              Blood type is determined by the presence of specific antigens on the surface of red blood cells. 
-              The ABO blood group system includes types A, B, AB, and O, with O being the most common. 
-              Additionally, the Rh factor can be either positive or negative, providing further classification of blood types.
-          </p>
+      <section class="mb-6">
+        <h2 class="text-2xl font-semibold mb-2">Welcome to the Inheritance Simulator!</h2>
+        <p>Select a trait from the navigation bar to test the inheritance of different characteristics.</p>
       </section>
-      
+
+      <section class="mb-6">
+        <h2 class="text-2xl font-semibold mb-2">What is Mendelian Genetics?</h2>
+        <p>Mendelian genetics is the study of how traits are inherited from one generation to the next, based on the work of Gregor Mendel. Mendel discovered that traits are passed on through discrete units called alleles, which can be dominant or recessive.</p>
+        <p>In this simulator, you can explore how different traits are inherited based on the combinations of alleles from the parents.</p>
+      </section>
+
+      <section class="mb-6">
+        <h2 class="text-2xl font-semibold mb-4">Common Traits Explored</h2>
+
+        <h3 class="text-xl font-medium">Eye Color</h3>
+        <p>Eye color is determined by multiple genes, with brown being the dominant trait over blue and green.</p>
+
+        <h3 class="text-xl font-medium mt-4">Skin Color</h3>
+        <p>Skin color is a polygenic trait influenced by several genes that produce a wide range of shades.</p>
+
+        <h3 class="text-xl font-medium mt-4">Height</h3>
+        <p>Height is also influenced by many genes and can be affected by environmental factors.</p>
+
+        <h3 class="text-xl font-medium mt-4">Hair Color</h3>
+        <p>Hair color is influenced by multiple genes that determine pigment type and density. Dark hair tends to be dominant over lighter shades like blonde and red.</p>
+
+        <h3 class="text-xl font-medium mt-4">Blood Type</h3>
+        <p>
+          Blood type is determined by the presence of specific antigens on the surface of red blood cells. 
+          The ABO blood group system includes types A, B, AB, and O, with O being the most common. 
+          Additionally, the Rh factor can be either positive or negative, providing further classification of blood types.
+        </p>
+      </section>
     </div>
 
     <div class="right-column">
-        <section>
-            <h2>How to Use the Simulator</h2>
-            <ol>
-                <li>Navigate to the desired trait tester from the menu above.</li>
-                <li>Select the parent traits you want to test.</li>
-                <li>Click the "Calculate" button to see possible offspring traits.</li>
-                <li>Review the results displayed for potential offspring characteristics.</li>
-            </ol>
-        </section>
-        
-        <section>
-            <h2>Visual Aid</h2>
-            <img src="images/mendel-diagram.png" alt="Mendelian Genetics Diagram" style="width:100%;max-width:600px;">
-            <p>This diagram illustrates the basic principles of Mendelian inheritance.</p>
-        </section>
+      <section class="mb-6">
+        <h2 class="text-2xl font-semibold mb-2">How to Use the Simulator</h2>
+        <ol class="list-decimal list-inside">
+          <li>Navigate to the desired trait tester from the menu above.</li>
+          <li>Select the parent traits you want to test.</li>
+          <li>Click the "Calculate" button to see possible offspring traits.</li>
+          <li>Review the results displayed for potential offspring characteristics.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold mb-2">Visual Aid</h2>
+        <img src="images/mendel-diagram.png" alt="Mendelian Genetics Diagram" class="w-full max-w-xl rounded shadow">
+        <p class="mt-2">This diagram illustrates the basic principles of Mendelian inheritance.</p>
+      </section>
     </div>
   </main>
 
+  <!-- Injected Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
   <script src="js/script.js"></script>
   <script src="js/darkmode.js"></script>
   <script src="js/footer.js"></script>

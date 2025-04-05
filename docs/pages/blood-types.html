@@ -5,26 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood Type Inheritance</title>
     <link rel="stylesheet" href="../css/style.css" id="light-mode-style">
-    <link rel="stylesheet" href="../css/darkmode.css" id="dark-mode-style" disabled> 
-    <link rel="stylesheet" href="../css/layout.css">  
+    <link rel="stylesheet" href="../css/darkmode.css" id="dark-mode-style" disabled>
+    <link rel="stylesheet" href="../css/layout.css">
 </head>
 <body data-theme="bloodType">
-    <header>
-        <h1>Blood Type Inheritance</h1>
-        <p>Learn about blood types and their inheritance patterns.</p>
-        <button id="darkModeToggle">Toggle Dark Mode</button>
+    <div id="nav-placeholder"></div>
+
+    <header class="bg-primary text-white py-6 shadow-md">
+        <div class="container">
+            <h1 class="text-4xl font-bold">Blood Type Inheritance</h1>
+            <p class="text-lg mt-2">Learn about blood types and their inheritance patterns.</p>
+            <button id="darkModeToggle" class="btn btn-outline mt-4">Toggle Dark Mode</button>
+        </div>
     </header>
 
-    <main class="container">
+    <main class="container grid grid-cols-1 md:grid-cols-2 gap-8 py-10">
         <div class="left-column">
-            <section>
-                <h2>What are Blood Types?</h2>
+            <section class="mb-6">
+                <h2 class="text-2xl font-semibold mb-2">What are Blood Types?</h2>
                 <p>Blood types are determined by the presence or absence of specific antigens on the surface of red blood cells. The main blood type systems are the ABO system and the Rh factor.</p>
             </section>
 
-            <section>
-                <h2>ABO Blood Types</h2>
-                <ul>
+            <section class="mb-6">
+                <h2 class="text-2xl font-semibold mb-2">ABO Blood Types</h2>
+                <ul class="list-disc list-inside">
                     <li><strong>Type A</strong>: Has A antigens and B antibodies.</li>
                     <li><strong>Type B</strong>: Has B antigens and A antibodies.</li>
                     <li><strong>Type AB</strong>: Has both A and B antigens, no antibodies (universal recipient).</li>
@@ -32,15 +36,15 @@
                 </ul>
             </section>
 
-            <section>
-                <h2>Rh Factor</h2>
+            <section class="mb-6">
+                <h2 class="text-2xl font-semibold mb-2">Rh Factor</h2>
                 <p>The Rh factor can be either positive (+) or negative (-). Rh-positive means the Rh antigen is present, while Rh-negative means it is absent. The combination of ABO type and Rh factor determines a person's complete blood type.</p>
             </section>
 
-            <section>
-                <h2>Blood Type Inheritance</h2>
+            <section class="mb-6">
+                <h2 class="text-2xl font-semibold mb-2">Blood Type Inheritance</h2>
                 <p>Blood type inheritance follows Mendelian genetics. Here are some common genotype combinations and their possible offspring blood types:</p>
-                <ul>
+                <ul class="list-disc list-inside">
                     <li>Type A (IAIA or IAi) x Type B (IBIB or IBi) can produce: A, B, AB, O</li>
                     <li>Type A (IAi) x Type O (ii) can produce: A, O</li>
                     <li>Type AB (IAIB) x Type O (ii) can produce: A, B</li>
@@ -50,36 +54,43 @@
         </div>
 
         <div class="right-column">
-            <section>
-                <h2>Blood Type Calculator</h2>
-                <p>Select parent blood types to see possible offspring blood types:</p>
-                <form id="bloodTypeForm">
-                    <label for="parent1">Parent 1 Blood Type:</label>
-                    <select id="parent1">
-                        <option value="IAIA">A (IAIA)</option>
-                        <option value="IAi">A (IAi)</option>
-                        <option value="IBIB">B (IBIB)</option>
-                        <option value="IBi">B (IBi)</option>
-                        <option value="IAIB">AB (IAIB)</option>
-                        <option value="ii">O (ii)</option>
-                    </select>
-            
-                    <label for="parent2">Parent 2 Blood Type:</label>
-                    <select id="parent2">
-                        <option value="IAIA">A (IAIA)</option>
-                        <option value="IAi">A (IAi)</option>
-                        <option value="IBIB">B (IBIB)</option>
-                        <option value="IBi">B (IBi)</option>
-                        <option value="IAIB">AB (IAIB)</option>
-                        <option value="ii">O (ii)</option>
-                    </select>
-            
-                    <button type="button" onclick="calculateBloodTypes()">Calculate Offspring Blood Types</button>
+            <section class="mb-6">
+                <h2 class="text-2xl font-semibold mb-2">Blood Type Calculator</h2>
+                <p class="mb-4">Select parent blood types to see possible offspring blood types:</p>
+                <form id="bloodTypeForm" class="space-y-4">
+                    <div>
+                        <label for="parent1" class="block mb-1">Parent 1 Blood Type:</label>
+                        <select id="parent1" class="w-full p-2 border rounded">
+                            <option value="IAIA">A (IAIA)</option>
+                            <option value="IAi">A (IAi)</option>
+                            <option value="IBIB">B (IBIB)</option>
+                            <option value="IBi">B (IBi)</option>
+                            <option value="IAIB">AB (IAIB)</option>
+                            <option value="ii">O (ii)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="parent2" class="block mb-1">Parent 2 Blood Type:</label>
+                        <select id="parent2" class="w-full p-2 border rounded">
+                            <option value="IAIA">A (IAIA)</option>
+                            <option value="IAi">A (IAi)</option>
+                            <option value="IBIB">B (IBIB)</option>
+                            <option value="IBi">B (IBi)</option>
+                            <option value="IAIB">AB (IAIB)</option>
+                            <option value="ii">O (ii)</option>
+                        </select>
+                    </div>
+                    <label for="child-count" class="block mt-4">Number of Children:</label>
+                    <input type="number" id="child-count" value="4" min="1" max="12" class="w-full p-2 border rounded">                    
+                    <button type="button" onclick="calculateBloodTypes()" class="btn btn-primary">Calculate Offspring Blood Types</button>
                 </form>
-                <div id="results"></div>
+                <div id="results" class="mt-4 text-lg font-medium"></div>
             </section>
         </div>
     </main>
+
+    <div id="footer-placeholder"></div>
 
     <script src="../js/script.js"></script>
     <script src="../js/darkmode.js"></script>
