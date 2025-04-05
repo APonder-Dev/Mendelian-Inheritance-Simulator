@@ -65,7 +65,7 @@ If you find Mendelian Inheritance Simulator useful and would like to support its
 [Donate on PayPal](https://www.paypal.com/donate/?business=6TUCF33LPY9K2&no_recurring=0&item_name=Development+and+Coding+Features&currency_code=USD)
 
 ## Contact
-For any inquiries or feedback, please reach out to [your email](mailto:wazupbutrcup@gmail.com).
+For any inquiries or feedback, please reach out to [your email](mailto:aponder.dev).
 
 ---
 
